@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #coding: utf-8
 
+print("MÉDIA DO BOLETIM")
 #1° trim
 prova1 = float(input("Qual a sua nota da AV1 do 1° trim?"))
 prova2 = float(input("Qual a sua nota da AV2 do 1° trim?"))
@@ -10,13 +11,24 @@ trim1 = [prova1, prova2]
 maxtrim1 = max(trim1)
 
 media1 = float(prova1+prova2)/2
-print(media1)
+
+print("")
+# print(media1)
+print("%.2f" % media1)
+print("")
+
 if(media1>7):
   print("PARABÉNS, VOCÊ PASSOU!!!              no 1° trim...")
 else:
   rec1 = float(input("Qual a sua nota da recuperação do 1° trim?"))
 
   media1 = float(rec1+maxtrim1)/2
+
+  print("")
+  # print(media1)
+  print("%.2f" % media1)
+  print("")
+
   if(media1>7):
     print("PARABÉNS, VOCÊ PASSOU!!!              no 1° trim...")
   else:
@@ -32,12 +44,24 @@ trim2 = [prova3, prova4]
 maxtrim2 = max(trim2)
 
 media2 = float(prova3+prova4)/2
+
+print("")
+# print(media2)
+print("%.2f" % media2)
+print("")
+
 if(media2>7):
   print("PARABÉNS, VOCÊ PASSOU!!!              no 2° trim...")
 else:
   rec2 = float(input("Qual a sua nota da recuperação do 2° trim?"))
 
   media2 = float(rec2+maxtrim2)/2
+
+  print("")
+  # print(media2)
+  print("%.2f" % media2)
+  print("")
+
   if(media2>7):
     print("PARABÉNS, VOCÊ PASSOU!!!              no 2° trim...")
   else:
@@ -53,12 +77,24 @@ trim3 = [prova6, prova5]
 maxtrim3 = max(trim3)
 
 media3 = float(prova5+prova6)/2
+
+print("")
+# print(media3)
+print("%.2f" % media3)
+print("")
+
 if(media3>7):
   print("PARABÉNS, VOCÊ PASSOU!!!              se você não tiver ficado em nos outros trim")
 else:
   rec3 = float(input("Qual a sua nota da recuperação do 3° trim?"))
 
   media3 = float(rec3+maxtrim3)/2
+
+  print("")
+  # print(media3)
+  print("%.2f" % media3)
+  print("")
+
   if(media3>7):
     print("PARABÉNS, VOCÊ PASSOU!!!              se você não tiver ficado em nos outros trim")
   else:
@@ -67,11 +103,18 @@ else:
 
 mediafin = (media1+media2+media3)/3
 
+print("")
+# print(mediafin)
+print("%.2f" % mediafin)
+print("")
+
 if(mediafin>7):
   print("AGORA VOCÊ PASSOU COM CERTEZA!!!")
 else:
+  print("")
+  print("você precisa de, no mínimo, {0:.2f}".format(10-mediafin))
   recfin = float(input("Qual a sua nota da recuperação final?"))
-  if(10-mediafin<recfin):
+  if(10-mediafin<=recfin):
     print("AEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
   else:
     print("SUCESSO                 ao contrário")
